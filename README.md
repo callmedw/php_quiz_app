@@ -10,7 +10,12 @@ This project was created for _[TreeHouse Talentpath](https://join.teamtreehouse.
 
 ## Features
 
-*
+* This app will start with a question (e.g. “What is 48 + 12?”)
+* Each question will have three answers to choose from.
+* A "correct" toast will be displayed if the question is answered correctly.
+* An "incorrect" toast will be displayed if the answer is incorrect.
+* After a toast is displayed the next question will be shown.
+* Once all questions have been answered the final score will be displayed.
 
 To pass this code review the following criteria are required:
 
