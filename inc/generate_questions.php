@@ -1,7 +1,6 @@
 <?php
 session_start();
 
-
 // Get random numbers to add
 function getRandomNumbers() {
   return array(random_int(0,132), random_int(0,132));
@@ -22,6 +21,7 @@ function getRandomAnswers($correctAnswer) {
       $answersArray[] = $random;
     }
   } while (count($answersArray) <= 2);
+  shuffle($answersArray);
   return $answersArray;
 }
 
@@ -31,6 +31,16 @@ function getQuestion($randomNumbers) {
   return $question;
 }
 
-echo getQuestion();
-// Loop for required number of questions
 // Add question and answer to questions array
+function buildQuiz() {
+  $randomNumbers = getRandomNumbers();
+  $question = getQuestion($randomNumbers);
+  $correctAnswer = getCorrectAnswer($randomNumbers);
+  $answers = getRandomAnswers($correctAnswer);
+  $quiz = [];
+  $quiz[$question] = $answers;
+  return $quiz;
+}
+
+// Loop for required number of questions
+print_r(buildQuiz());
