@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 
 // Get random numbers to add
 function getRandomNumbers() {
@@ -24,5 +26,11 @@ function getRandomAnswers($correctAnswer) {
 }
 
 // Generate random questions
+function getQuestion($randomNumbers) {
+  $question = "What is $randomNumbers[0] + $randomNumbers[1]?";
+  return $question;
+}
+
+echo getQuestion();
 // Loop for required number of questions
 // Add question and answer to questions array
