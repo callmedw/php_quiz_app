@@ -32,15 +32,23 @@ function getQuestion($randomNumbers) {
 }
 
 // Add question and answer to questions array
-function buildQuiz() {
+function getFullQuestion() {
   $randomNumbers = getRandomNumbers();
   $question = getQuestion($randomNumbers);
   $correctAnswer = getCorrectAnswer($randomNumbers);
   $answers = getRandomAnswers($correctAnswer);
-  $quiz = [];
-  $quiz[$question] = $answers;
-  return $quiz;
+  $fullQuestion = [];
+  $fullQuestion[$question] = $answers;
+  return $fullQuestion;
 }
 
 // Loop for required number of questions
+function buildQuiz() {
+  $quiz = [];
+  for ($i = 0; $i <= 9; $i++) {
+    $quiz[] = getFullQuestion();
+  }
+  return $quiz;
+}
+
 print_r(buildQuiz());
