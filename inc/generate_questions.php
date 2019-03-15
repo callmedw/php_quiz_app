@@ -1,5 +1,4 @@
 <?php
-session_start();
 
 // Get random numbers to add
 function getRandomNumbers() {
