@@ -1,7 +1,5 @@
 > # Quiz App
-
 > _By: Dana Weiss_
-
 > The purpose of this application is to test basic understanding of PHP syntax and session variables.
 This project was created for _[TreeHouse Talentpath](https://join.teamtreehouse.com/talentpath/)_.
 
