@@ -1,12 +1,10 @@
-# Quiz App
-> _This app asks basic arithmetic questions._
+> # Quiz App
 
-#### _By: Dana Weiss_
+> _By: Dana Weiss_
 
-## Description
-
-The purpose of this application is to test basic understanding of PHP syntax and session variables.
+> The purpose of this application is to test basic understanding of PHP syntax and session variables.
 This project was created for _[TreeHouse Talentpath](https://join.teamtreehouse.com/talentpath/)_.
+
 
 ## Features
 
@@ -44,7 +42,7 @@ dynamically generated questions and answers so did not:
 
 * 🐞
 
-## Support and contact details
+## Support
 
 _Contact: hello@mynameisdanaweiss.com_
 
