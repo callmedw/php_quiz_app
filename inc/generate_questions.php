@@ -13,41 +13,36 @@ function getCorrectAnswer($randomNumbers) {
 // Get incorrect answers within 10 numbers either way of correct answer
 // Make sure it is a unique answer
 function getRandomAnswers($correctAnswer) {
-  $answersArray[] = $correctAnswer;
   do {
     $random = random_int($correctAnswer - 10, $correctAnswer + 10);
     if ($random != $correctAnswer) {
       $answersArray[] = $random;
     }
   } while (count($answersArray) <= 2);
-  shuffle($answersArray);
   return $answersArray;
 }
 
 // Generate random questions
-function getQuestion($randomNumbers) {
-  $question = "What is $randomNumbers[0] + $randomNumbers[1]?";
-  return $question;
-}
-
-// Add question and answer to questions array
-function getFullQuestion() {
+function buildFullQuestion() {
   $randomNumbers = getRandomNumbers();
-  $question = getQuestion($randomNumbers);
   $correctAnswer = getCorrectAnswer($randomNumbers);
   $answers = getRandomAnswers($correctAnswer);
-  $fullQuestion = [];
-  $fullQuestion[$question] = $answers;
+  $fullQuestion[] = [
+    "leftAdder" => $randomNumbers[0],
+    "rightAdder" => $randomNumbers[1],
+    "correctAnswer" => $correctAnswer,
+    "firstIncorrectAnswer" => $answers[0],
+    "secondIncorrectAnswer" => $answers[1],
+  ];
   return $fullQuestion;
 }
 
+// Add question and answer to questions array
 // Loop for required number of questions
 function buildQuiz() {
   $quiz = [];
   for ($i = 0; $i <= 9; $i++) {
-    $quiz[] = getFullQuestion();
+    $quiz[] = buildFullQuestion();
   }
   return $quiz;
 }
-
-print_r(buildQuiz());
