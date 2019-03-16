@@ -23,26 +23,22 @@ function getRandomAnswers($correctAnswer) {
 }
 
 // Generate random questions
-function buildFullQuestion() {
-  $randomNumbers = getRandomNumbers();
-  $correctAnswer = getCorrectAnswer($randomNumbers);
-  $answers = getRandomAnswers($correctAnswer);
-  $fullQuestion[] = [
-    "leftAdder" => $randomNumbers[0],
-    "rightAdder" => $randomNumbers[1],
-    "correctAnswer" => $correctAnswer,
-    "firstIncorrectAnswer" => $answers[0],
-    "secondIncorrectAnswer" => $answers[1],
-  ];
-  return $fullQuestion;
-}
-
 // Add question and answer to questions array
 // Loop for required number of questions
 function buildQuiz() {
-  $quiz = [];
   for ($i = 0; $i <= 9; $i++) {
-    $quiz[] = buildFullQuestion();
+    $randomNumbers = getRandomNumbers();
+    $correctAnswer = getCorrectAnswer($randomNumbers);
+    $answers = getRandomAnswers($correctAnswer);
+    $quiz[] = [
+      "leftAdder" => $randomNumbers[0],
+      "rightAdder" => $randomNumbers[1],
+      "correctAnswer" => $correctAnswer,
+      "firstIncorrectAnswer" => $answers[0],
+      "secondIncorrectAnswer" => $answers[1],
+    ];
   }
   return $quiz;
 }
+
+print_r(buildQuiz());
