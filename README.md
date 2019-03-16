@@ -1,5 +1,5 @@
 # Quiz App
-#### _This app asks basic arithmetic questions._
+> _This app asks basic arithmetic questions._
 
 #### _By: Dana Weiss_
 
@@ -23,7 +23,6 @@ To pass this code review the following criteria are required:
 - [x] App includes required form components.
 - [x] The app only tests for addition.
 - [ ] Correct answers are marked as correct, and incorrect answers are marked as incorrect.
-- [n/a] If using a question bank, questions loop when the end is reached.
 - [ ] Toasts are displayed for correct and incorrect answers.
 - [x] Buttons are used.
 - [ ] App works as expected when buttons are pressed (e.g. when a Submit button is pressed the provided answer is being evaluated)
@@ -37,6 +36,9 @@ Additionally the app includes:
 - [ ] All the elements are still easily readable after the colors are added
 - [x] Questions are dynamically generated without the use of a static question bank.
 - [ ] The user may choose to start the quiz again.
+
+dynamically generated questions and answers so did not:
+- [ ] If using a question bank, questions loop when the end is reached.
 
 ## Known Bugs
 
