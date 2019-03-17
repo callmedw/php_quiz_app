@@ -1,5 +1,6 @@
 > # Quiz App
 > _By: Dana Weiss_
+>
 > The purpose of this application is to test basic understanding of PHP syntax and session variables.
 This project was created for _[TreeHouse Talentpath](https://join.teamtreehouse.com/talentpath/)_.
 
@@ -15,13 +16,13 @@ This project was created for _[TreeHouse Talentpath](https://join.teamtreehouse.
 
 To pass this code review the following criteria are required:
 
-- [ ] Design roughly matches the provided mockup.
+- [x] Design roughly matches the provided mockup.
 - [x] App includes required form components.
 - [x] The app only tests for addition.
-- [ ] Correct answers are marked as correct, and incorrect answers are marked as incorrect.
-- [ ] Toasts are displayed for correct and incorrect answers.
+- [x] Correct answers are marked as correct, and incorrect answers are marked as incorrect.
+- [x] Toasts are displayed for correct and incorrect answers.
 - [x] Buttons are used.
-- [ ] App works as expected when buttons are pressed (e.g. when a Submit button is pressed the provided answer is being evaluated)
+- [x] App works as expected when buttons are pressed (e.g. when a Submit button is pressed the provided answer is being evaluated)
 - [x] Questions and answers are shuffled.
 - [ ] Final score displayed.
 
