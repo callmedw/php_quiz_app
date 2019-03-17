@@ -1,25 +1,16 @@
-<?php include("inc/functions.php");?>
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Math Quiz: Addition</title>
-    <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/styles.css">
-  </head>
-<body>
-    <div class="container">
-        <div id="quiz-box">
-            <p class="breadcrumbs">Question # of #</p>
-            <p class="quiz">What is 54 + 71?</p>
-            <form action="index.php" method="post">
-                <input type="hidden" name="id" value="0" />
-                <input type="submit" class="btn" name="answer" value="135" />
-                <input type="submit" class="btn" name="answer" value="125" />
-                <input type="submit" class="btn" name="answer" value="115" />
-            </form>
-        </div>
-    </div>
-  </body>
-</html>
+<?php include 'inc/header.php'; ?>
+<?php include 'inc/quiz.php'; ?>
+
+  <div id="quiz-box">
+    <form method="post" action="index.php?p=<?php echo ($page+1); ?>">
+    <p class='breadcrumbs'>Question <?php echo $page; ?> of <?php echo $total; ?></p>
+    <p class='quiz'>What is <?php echo $firstNumber; ?> + <?php echo $secondNumber; ?></p>
+    <form method='post'>
+      <input type='hidden' name='id' value='0' />
+      <?php foreach ($answers as $answer) { ?>
+        <input type='submit' class='btn' name='input' value='<?php echo $answer; ?>' />
+      <?php } ?>
+    </form>
+  </div>
+
+<?php include 'inc/footer.php'; ?>
