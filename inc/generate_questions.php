@@ -1,5 +1,4 @@
 <?php
-
 // Get random numbers to add
 function getRandomNumbers() {
   return array(random_int(0,132), random_int(0,132));
@@ -13,9 +12,10 @@ function getCorrectAnswer($randomNumbers) {
 // Get incorrect answers within 10 numbers either way of correct answer
 // Make sure it is a unique answer
 function getRandomAnswers($correctAnswer) {
+  $answersArray = [];
   do {
     $random = random_int($correctAnswer - 10, $correctAnswer + 10);
-    if ($random != $correctAnswer) {
+    if ($random != $correctAnswer && !in_array($random, $answersArray)) {
       $answersArray[] = $random;
     }
   } while (count($answersArray) <= 2);
@@ -23,7 +23,6 @@ function getRandomAnswers($correctAnswer) {
 }
 
 // Generate random questions
-// Add question and answer to questions array
 // Loop for required number of questions
 function buildQuiz() {
   for ($i = 0; $i <= 9; $i++) {
@@ -40,5 +39,3 @@ function buildQuiz() {
   }
   return $quiz;
 }
-
-print_r(buildQuiz());
