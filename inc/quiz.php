@@ -32,6 +32,22 @@ if ($page > 10) {
   exit;
 }
 
-
 //take input
 $input = trim(filter_input(INPUT_POST, 'input', FILTER_SANITIZE_NUMBER_INT));
+
+// set session variables for use in index and to track the index(set) of questions
+$set = $page - 1;
+$_SESSION['quiz'] = json_decode(file_get_contents('inc/questions.json'),true);
+$score =  $_SESSION['score'];
+$toast =  $_SESSION['toast'];
+$total = count($_SESSION['quiz']);
+$firstNumber = $_SESSION['quiz'][$set]['leftAdder'];
+$secondNumber = $_SESSION['quiz'][$set]['rightAdder'];
+$correctAnswer = $_SESSION['quiz'][$set]['correctAnswer'];
+$answers = [
+  $_SESSION['quiz'][$set]['correctAnswer'],
+  $_SESSION['quiz'][$set]['firstIncorrectAnswer'],
+  $_SESSION['quiz'][$set]['secondIncorrectAnswer']
+];
+//shuffle answers
+shuffle($answers);
