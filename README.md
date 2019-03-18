@@ -24,7 +24,7 @@ To pass this code review the following criteria are required:
 - [x] Buttons are used.
 - [x] App works as expected when buttons are pressed (e.g. when a Submit button is pressed the provided answer is being evaluated)
 - [x] Questions and answers are shuffled.
-- [ ] Final score displayed.
+- [x] Final score displayed.
 
 Additionally the app includes:
 
@@ -32,7 +32,7 @@ Additionally the app includes:
 - [ ] Contrasting color has been used for the quiz elements.
 - [ ] All the elements are still easily readable after the colors are added
 - [x] Questions are dynamically generated without the use of a static question bank.
-- [ ] The user may choose to start the quiz again.
+- [x] The user may choose to start the quiz again.
 
 dynamically generated questions and answers so did not:
 - [ ] If using a question bank, questions loop when the end is reached.
