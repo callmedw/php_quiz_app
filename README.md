@@ -37,7 +37,6 @@ Additionally the app includes:
 ## Known Bugs
 
 * 🐞
-* first score is not recorded and toast not shown. 
 
 ## Support
 
