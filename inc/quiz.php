@@ -51,3 +51,13 @@ $answers = [
 ];
 //shuffle answers
 shuffle($answers);
+
+// check input against correct answer set toast accordingly
+if(!empty($input)) {
+  if ($_SESSION['quiz'][$set - 1]['correctAnswer'] == $input) {
+    $_SESSION['score'] += 1;
+    $_SESSION['toast'] = "correct";
+  } else {
+    $_SESSION['toast'] = "incorrect";
+  }
+}
