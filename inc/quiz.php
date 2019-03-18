@@ -16,3 +16,22 @@ if (empty($page)) {
   $page = 1;
   writeQuiz();
 }
+
+// reset the score and the toasts
+if(!isset($_SESSION['score'])) {
+  $_SESSION['score'] = 0;
+}
+
+if(!isset($_SESSION['toast'])) {
+  $_SESSION['toast'] = NULL;
+}
+
+// once all questions are asked redirect to gameover page
+if ($page > 10) {
+  header("location:gameover.php");
+  exit;
+}
+
+
+//take input
+$input = trim(filter_input(INPUT_POST, 'input', FILTER_SANITIZE_NUMBER_INT));
