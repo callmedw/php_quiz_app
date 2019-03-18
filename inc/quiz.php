@@ -26,7 +26,7 @@ if(!isset($_SESSION['toast'])) {
 }
 
 // once all questions are asked redirect to gameover page
-if ($page > 10) {
+if ($page > 11) {
   header("location:gameover.php");
   exit;
 }
@@ -36,6 +36,7 @@ $input = trim(filter_input(INPUT_POST, 'input', FILTER_SANITIZE_NUMBER_INT));
 
 // set session variables for use in index and to track the index(set) of questions
 $set = $page - 1;
+$_SESSION['set'] = $set;
 $_SESSION['quiz'] = json_decode(file_get_contents('inc/questions.json'),true);
 $score =  $_SESSION['score'];
 $toast =  $_SESSION['toast'];
@@ -52,7 +53,7 @@ $answers = [
 shuffle($answers);
 
 // check input against correct answer set toast accordingly
-if(!empty($input)) {
+if((!empty($input)) && ($_SESSION['set'] < $total)) {
   if ($_SESSION['quiz'][$set - 1]['correctAnswer'] == $input) {
     $_SESSION['score']++;
     $toast = "correct";
