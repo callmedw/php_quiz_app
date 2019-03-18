@@ -6,6 +6,7 @@
       <h2>Nice Job! That's correct!</h2>
     </div>
   <?php } ?>
+  
   <?php if ($toast == "incorrect") { ?>
     <div class='incorrect-toast'>
       <h2>Dang! That's the wrong answer. Keep trying! You got this!</h2>

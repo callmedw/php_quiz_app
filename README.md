@@ -28,18 +28,16 @@ To pass this code review the following criteria are required:
 
 Additionally the app includes:
 
-- [ ] A non-white background color is used
-- [ ] Contrasting color has been used for the quiz elements.
-- [ ] All the elements are still easily readable after the colors are added
+- [x] A non-white background color is used
+- [x] Contrasting color has been used for the quiz elements.
+- [x] All the elements are still easily readable after the colors are added
 - [x] Questions are dynamically generated without the use of a static question bank.
 - [x] The user may choose to start the quiz again.
-
-dynamically generated questions and answers so did not:
-- [ ] If using a question bank, questions loop when the end is reached.
 
 ## Known Bugs
 
 * 🐞
+* first score is not recorded and toast not shown. 
 
 ## Support
 
