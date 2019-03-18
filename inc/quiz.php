@@ -5,7 +5,6 @@
 
 // Include questions
 include("generate_questions.php");
-session_start();
 
 // Show which question they are on
 $page = filter_input(INPUT_GET, 'p', FILTER_SANITIZE_NUMBER_INT);
@@ -55,9 +54,9 @@ shuffle($answers);
 // check input against correct answer set toast accordingly
 if(!empty($input)) {
   if ($_SESSION['quiz'][$set - 1]['correctAnswer'] == $input) {
-    $_SESSION['score'] += 1;
-    $_SESSION['toast'] = "correct";
+    $_SESSION['score']++;
+    $toast = "correct";
   } else {
-    $_SESSION['toast'] = "incorrect";
+    $toast = "incorrect";
   }
 }

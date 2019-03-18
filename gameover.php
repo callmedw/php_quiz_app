@@ -3,7 +3,7 @@
 
   <div class="end-page-layout">
     <div class="gameover-score">
-      <h1> FINAL SCORE: <?php echo $score; ?> / <?php echo $total; ?> </h1>
+      <h1> FINAL SCORE: <?php echo $_SESSION['score']; ?> / <?php echo $total; ?> </h1>
     </div>
 
     <div class="action-div">
