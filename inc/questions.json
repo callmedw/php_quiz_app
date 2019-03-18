@@ -1,72 +1,72 @@
 [
     {
-        "leftAdder": 80,
-        "rightAdder": 42,
-        "correctAnswer": 122,
-        "firstIncorrectAnswer": 127,
-        "secondIncorrectAnswer": 120
+        "leftAdder": 4,
+        "rightAdder": 5,
+        "correctAnswer": 9,
+        "firstIncorrectAnswer": 13,
+        "secondIncorrectAnswer": 4
     },
     {
-        "leftAdder": 66,
-        "rightAdder": 32,
-        "correctAnswer": 98,
-        "firstIncorrectAnswer": 92,
-        "secondIncorrectAnswer": 105
+        "leftAdder": 57,
+        "rightAdder": 1,
+        "correctAnswer": 58,
+        "firstIncorrectAnswer": 49,
+        "secondIncorrectAnswer": 67
     },
     {
-        "leftAdder": 76,
-        "rightAdder": 79,
-        "correctAnswer": 155,
-        "firstIncorrectAnswer": 149,
-        "secondIncorrectAnswer": 159
+        "leftAdder": 27,
+        "rightAdder": 123,
+        "correctAnswer": 150,
+        "firstIncorrectAnswer": 140,
+        "secondIncorrectAnswer": 154
     },
     {
-        "leftAdder": 47,
-        "rightAdder": 57,
-        "correctAnswer": 104,
-        "firstIncorrectAnswer": 103,
-        "secondIncorrectAnswer": 94
+        "leftAdder": 5,
+        "rightAdder": 44,
+        "correctAnswer": 49,
+        "firstIncorrectAnswer": 43,
+        "secondIncorrectAnswer": 44
     },
     {
-        "leftAdder": 116,
-        "rightAdder": 23,
-        "correctAnswer": 139,
-        "firstIncorrectAnswer": 148,
+        "leftAdder": 40,
+        "rightAdder": 77,
+        "correctAnswer": 117,
+        "firstIncorrectAnswer": 110,
+        "secondIncorrectAnswer": 111
+    },
+    {
+        "leftAdder": 132,
+        "rightAdder": 65,
+        "correctAnswer": 197,
+        "firstIncorrectAnswer": 194,
+        "secondIncorrectAnswer": 199
+    },
+    {
+        "leftAdder": 84,
+        "rightAdder": 40,
+        "correctAnswer": 124,
+        "firstIncorrectAnswer": 130,
         "secondIncorrectAnswer": 133
     },
     {
-        "leftAdder": 18,
-        "rightAdder": 105,
-        "correctAnswer": 123,
-        "firstIncorrectAnswer": 121,
-        "secondIncorrectAnswer": 113
+        "leftAdder": 132,
+        "rightAdder": 107,
+        "correctAnswer": 239,
+        "firstIncorrectAnswer": 241,
+        "secondIncorrectAnswer": 248
     },
     {
-        "leftAdder": 13,
-        "rightAdder": 36,
-        "correctAnswer": 49,
-        "firstIncorrectAnswer": 55,
-        "secondIncorrectAnswer": 54
+        "leftAdder": 77,
+        "rightAdder": 95,
+        "correctAnswer": 172,
+        "firstIncorrectAnswer": 168,
+        "secondIncorrectAnswer": 175
     },
     {
-        "leftAdder": 51,
-        "rightAdder": 37,
-        "correctAnswer": 88,
-        "firstIncorrectAnswer": 96,
-        "secondIncorrectAnswer": 94
-    },
-    {
-        "leftAdder": 42,
-        "rightAdder": 78,
-        "correctAnswer": 120,
-        "firstIncorrectAnswer": 122,
-        "secondIncorrectAnswer": 114
-    },
-    {
-        "leftAdder": 22,
-        "rightAdder": 29,
-        "correctAnswer": 51,
-        "firstIncorrectAnswer": 49,
-        "secondIncorrectAnswer": 56
+        "leftAdder": 23,
+        "rightAdder": 90,
+        "correctAnswer": 113,
+        "firstIncorrectAnswer": 108,
+        "secondIncorrectAnswer": 118
     }
 ]

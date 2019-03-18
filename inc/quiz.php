@@ -4,7 +4,7 @@
  */
 
 // Include questions
-include("generate_questions.php");
+include_once("generate_questions.php");
 
 // Show which question they are on
 $page = filter_input(INPUT_GET, 'p', FILTER_SANITIZE_NUMBER_INT);
@@ -13,6 +13,7 @@ $page = filter_input(INPUT_GET, 'p', FILTER_SANITIZE_NUMBER_INT);
 if (empty($page)) {
   session_destroy();
   $page = 1;
+  $_SESSION['score'] = 0;
   writeQuiz();
 }
 
@@ -27,7 +28,7 @@ if(!isset($_SESSION['toast'])) {
 
 // once all questions are asked redirect to gameover page
 if ($page > 11) {
-  header("location:gameover.php");
+  header("location:index.php");
   exit;
 }
 
@@ -41,19 +42,22 @@ $_SESSION['quiz'] = json_decode(file_get_contents('inc/questions.json'),true);
 $score =  $_SESSION['score'];
 $toast =  $_SESSION['toast'];
 $total = count($_SESSION['quiz']);
-$firstNumber = $_SESSION['quiz'][$set]['leftAdder'];
-$secondNumber = $_SESSION['quiz'][$set]['rightAdder'];
-$correctAnswer = $_SESSION['quiz'][$set]['correctAnswer'];
-$answers = [
-  $_SESSION['quiz'][$set]['correctAnswer'],
-  $_SESSION['quiz'][$set]['firstIncorrectAnswer'],
-  $_SESSION['quiz'][$set]['secondIncorrectAnswer']
-];
-//shuffle answers
-shuffle($answers);
+
+if ($page <= $total) {
+  $firstNumber = $_SESSION['quiz'][$set]['leftAdder'];
+  $secondNumber = $_SESSION['quiz'][$set]['rightAdder'];
+  $correctAnswer = $_SESSION['quiz'][$set]['correctAnswer'];
+  $answers = [
+    $_SESSION['quiz'][$set]['correctAnswer'],
+    $_SESSION['quiz'][$set]['firstIncorrectAnswer'],
+    $_SESSION['quiz'][$set]['secondIncorrectAnswer']
+  ];
+  //shuffle answers
+  shuffle($answers);
+}
 
 // check input against correct answer set toast accordingly
-if((!empty($input)) && ($_SESSION['set'] < $total)) {
+if(!empty($input)) {
   if ($_SESSION['quiz'][$set - 1]['correctAnswer'] == $input) {
     $_SESSION['score']++;
     $toast = "correct";
