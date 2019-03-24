@@ -1,24 +1,25 @@
 <?php session_start(); ?>
-<?php include 'inc/header.php'; ?>
 <?php include 'inc/quiz.php'; ?>
+
+<?php include 'inc/header.php'; ?>
+
+  <?php if ($toast == "correct") { ?>
+    <div class='correct-toast'>
+      <h2>Nice Job! That's correct!</h2>
+    </div>
+  <?php } ?>
+
+  <?php if ($toast == "incorrect") { ?>
+    <div class='incorrect-toast'>
+      <h2>Dang! That's the wrong answer. Keep trying! You got this!</h2>
+    </div>
+  <?php } ?>
 
   <?php if ($page == '11') { include 'inc/gameover.php'; ?>
   <?php } else { ?>
 
-    <?php if ($toast == "correct") { ?>
-      <div class='correct-toast'>
-        <h2>Nice Job! That's correct!</h2>
-      </div>
-    <?php } ?>
-
-    <?php if ($toast == "incorrect") { ?>
-      <div class='incorrect-toast'>
-        <h2>Dang! That's the wrong answer. Keep trying! You got this!</h2>
-      </div>
-    <?php } ?>
-
     <div class="scoreboard">
-      <h1> SCORE: <?php echo $_SESSION['score']; ?> / <?php echo $total; ?> </h1>
+      <h1> SCORE: <?php echo $score; ?> / <?php echo $total; ?> </h1>
     </div>
 
     <div id="quiz-box">

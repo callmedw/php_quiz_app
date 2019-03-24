@@ -1,7 +1,4 @@
 <?php
-/*
- * PHP Techdegree Project 2: Build a Quiz App in PHP
- */
 
 // Include questions
 include_once("generate_questions.php");
@@ -39,9 +36,8 @@ $input = trim(filter_input(INPUT_POST, 'input', FILTER_SANITIZE_NUMBER_INT));
 $set = $page - 1;
 $_SESSION['set'] = $set;
 $_SESSION['quiz'] = json_decode(file_get_contents('inc/questions.json'),true);
-$score =  $_SESSION['score'];
-$toast =  $_SESSION['toast'];
 $total = count($_SESSION['quiz']);
+$toast =  $_SESSION['toast'];
 
 if ($page <= $total) {
   $firstNumber = $_SESSION['quiz'][$set]['leftAdder'];
@@ -65,3 +61,6 @@ if(!empty($input)) {
     $toast = "incorrect";
   }
 }
+
+//set score for index
+$score =  $_SESSION['score'];

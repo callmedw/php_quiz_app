@@ -46,8 +46,7 @@ function writeQuiz() {
   $jsonQuiz = json_encode(buildQuiz(), JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
   try {
     file_put_contents ('inc/questions.json', $jsonQuiz);
-  }
-  catch(Exception $e) {
+  } catch(Exception $e) {
     echo "Error: " . $e->getMessage();
   }
 }
